@@ -1,0 +1,9 @@
+amino_acid: 코돈과 aa를 dictionary로 조합, key가 tuple의 형태이다
+
+translation 함수: 주어진 DNA의 complement한 strand를 만들고, 5`-3`방향으로 정렬시킨다.
+		이 DNA에서 전사될 수 있는 두 mRNA는 주어진 DNA strand와 같(지만 T가 U로 바뀐꼴)고, 나머지 하나는 위에서 만들어낸 complement한 strand(에서 T가 U로 바뀐꼴)이다.
+		두 RNA가닥(이지만 U대신 T가 들어간)에서, 각각 open reading frame을 읽으면 6개가 되는데 (0, 1, 2) 이 6개의 경우의 수를 amino_acid dictionary를 사용해 번역하여 return한다.
+		list의 형태로 반환
+
+possible_protein 함수: 위 translation함수에서 뱉어낸 list를 가져다가, M으로 시작하여 가장 먼저 만드는 X(stop codon)의 쌍을 찾아 각각의 protein을 protein_set(set이기 때문에 중복을 피함)에 넣은 뒤 반환
+			set의 형태로 반환
