@@ -10,7 +10,6 @@ for line in perm:
     line[1] = list(map(int, line[1].split(' ')))
 
 def reversal_set(lst): #list -> list in list
-    
     lst_combination = [lst]
     for i in range(len(lst)):
         for j in range(i+1, len(lst)):
